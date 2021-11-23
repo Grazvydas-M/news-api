@@ -29,9 +29,10 @@ class SourcesController extends Controller
         return view('articles.index', ['articles' => $articles, 'source' => $source]);
     }
 
-    public function articleData(Request $request)
+    public function articleData(string $source, string $title)
     {
+        $articles = $this->newsServices->getArticles($source, $title);
 
-       return view('article.index',  ['articles' => $request->toArray()]);
+       return view('article.index',  ['articles' => $articles[0][0]]);
     }
 }

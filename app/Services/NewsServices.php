@@ -13,16 +13,16 @@ class NewsServices
         $this->newsApi = $newsApi;
     }
 
-    public function getSources()
+    public function getSources(): array
     {
         $sources[] = $this->newsApi->getSources(null, 'en')->sources;
 
         return $sources;
     }
 
-    public function getArticles(string $source)
+    public function getArticles(string $source, string $title = null): array
     {
-        $articles[] = $this->newsApi->getEverything(null, $source)->articles;
+        $articles[] = $this->newsApi->getEverything($title, $source)->articles;
 
         return $articles;
     }

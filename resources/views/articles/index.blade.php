@@ -30,7 +30,7 @@
                 <td>
                     <img src="{{$article->urlToImage}}" alt="News thumbnail" style="width: 180px; height: 120px">
                 </td>
-                <td><a href="{{route('article.index', (array)$article)}}" target="_blank" class="btn btn-success" style="margin-top: 50%;">Read more</a></td>
+                <td><a href="{{route('article.index', [$source, 'title' => $article->title])}}" target="_blank" class="btn btn-success" style="margin-top: 50%;">Read more</a></td>
             </tr>
         @endforeach
     @endforeach

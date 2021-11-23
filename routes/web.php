@@ -21,7 +21,7 @@ Route::get('', function () {
 Route::group(['prefix' => 'sources'], function(){
     Route::get('', [SourcesController::class, 'index'])->name('sources.index');
     Route::get('/{source}', [SourcesController::class, 'articles'])->name('articles.index');
-    Route::get('/article/view', [SourcesController::class, 'articleData'])->name('article.index');
+    Route::get('/{source}/{title}', [SourcesController::class, 'articleData'])->name('article.index');
 });
 
 
