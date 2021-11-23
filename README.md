@@ -11,10 +11,10 @@ List of dependencies
 ## Setup Project
 -[Git clone project](https://github.com/Grazvydas-M/news-api.git) <br/>
 
--cp .env.example .env
--add NEWS_API_KEY to env.
--composer install
--php artisan key:generate
--php artisan serve
+-cp .env.example .env <br/>
+-add NEWS_API_KEY to env. <br/>
+-composer install <br/>
+-php artisan key:generate <br/>
+-php artisan serve <br/>
 
 
